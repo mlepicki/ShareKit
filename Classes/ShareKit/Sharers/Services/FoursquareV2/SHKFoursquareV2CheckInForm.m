@@ -30,6 +30,13 @@
 
 @implementation SHKFoursquareV2CheckInForm
 
+- (void)cancel
+{
+    [[SHK currentHelper] hideCurrentViewControllerAnimated:YES];
+	[self.delegate sendDidCancel];
+}
+
+
 - (void)setupBarButtonItems {
 
     //self.title = SHKLocalizedString(@"Foursquare");
@@ -37,6 +44,11 @@
                                                                            style:UIBarButtonItemStyleDone
                                                                           target:self
                                                                           action:@selector(save)] autorelease];
+    
+    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                           target:self
+                                                                                           action:@selector(cancel)] autorelease];
+    
 }
 
 @end
