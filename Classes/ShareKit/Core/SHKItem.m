@@ -41,7 +41,7 @@
 @implementation SHKItem
 
 @synthesize shareType;
-@synthesize URL, image, title, text, tags, data, mimeType, filename;
+@synthesize URL, image, title, text, tags, data, mimeType, filename, emailText;
 @synthesize custom;
 
 - (void)dealloc
@@ -59,6 +59,8 @@
 	[filename release];
 	
 	[custom release];
+    
+    [emailText release];
 	
 	[super dealloc];
 }

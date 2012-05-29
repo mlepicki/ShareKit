@@ -71,6 +71,7 @@ typedef enum
 @property (nonatomic, retain)	NSData *data;
 @property (nonatomic, retain)	NSString *mimeType;
 @property (nonatomic, retain)	NSString *filename;
+@property (nonatomic, retain) NSString *emailText;
 
 + (id)URL:(NSURL *)url title:(NSString *)title;
 + (id)image:(UIImage *)image title:(NSString *)title;

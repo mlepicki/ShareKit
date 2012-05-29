@@ -132,6 +132,9 @@
 	{
 		if (item.text != nil)
 			body = item.text;
+        
+        if(item.emailText != nil)
+            body = item.emailText;
 		
 		if (item.URL != nil)
 		{	
